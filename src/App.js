@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React, {useState} from 'react';
 
-function App() {
+const App=() =>{
+
+  const [sideWidth, setSideWidth] = useState(300)
+  const handleDrag = ()=>{
+    let  newWidth = sideWidth
+    newWidth = newWidth + 1
+    setSideWidth(newWidth)
+
+    console.log(sideWidth)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="topHeader">
+        header
+      </div>
+      <div className="mainArea">
+        <div onDragOver={handleDrag} style={{width: sideWidth}} className="leftSider"> 
+         <div className="title">ASU Engineering Students</div>   
+          <div className="menu">
+          </div>      
+        </div>
+        <div   className="resizer"> </div>
+        
+        <div className="centerContent">
+            <div className="contentHeader">
+              kay
+            </div>
+            <div className="msgContent">
+              <p>
+                  New margin
+              </p>
+            </div>
+            <div className="contentFooter">
+              Chale
+            </div>
+        </div>
+        <div className="rightSider">
+
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
