@@ -1,0 +1,22 @@
+
+.searchOrg{
+    background: var(--light-white);
+    color: white;
+    padding: 5px;
+    border: none;
+    min-width: 0;
+    max-width: 732px;
+    height: 24px;
+    border-radius: 6px;
+    flex: 5;
+    margin: 0 2em;
+}
+.searchOrg:hover{
+    background: rgb(255, 255, 255, 0.25);
+  }
+
+
+.searchText{
+    padding: 0 10px;
+    font-size: 13px;
+}

@@ -13,11 +13,15 @@
 
 .topHeader{
   /* position: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary-dark-color);
   width: 100%;
   /* bottom: 0; */
   color: #ffffff;
-  box-shadow: 0 1px 0 0 rgb(255 255 255 / 10%)
+  box-shadow: 0 1px 0 0 rgb(255 255 255 / 10%);
+  padding: 6px 3px
 }
 
 .mainArea{
@@ -33,16 +37,38 @@
   height: 100vh;
   width: 300px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   
+}
+
+.nav{
+  margin-top: 1em;
+}
+
+.menuItem{
+  /* margin: 0.3em 1em; */
+  color: rgb(255, 255, 255, 0.7);
+  padding: 0.3em 0 0.3em 0em;
+  width: 100%;
+}
+
+.menuIcon{
+  margin-right: 0.5em;
+}
+
+.navItem{
+  margin-left: 1em ;
+}
+.menuItem:hover{
+  background: var(--primary-dark-color);
 }
 
 .resizer{
   user-select: none;
   cursor: col-resize;
   height: 100%;
-  width: 5px;
-  background: wheat;
+  width: 1px;
+  background: gray;
 }
 
 .fullcenter{
@@ -51,8 +77,8 @@
 
 .contentHeader{
   width: 100%;
-  border-bottom:  2px gray;
-  background: gray;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  background: white;
   height: 50px;
 }
 
@@ -68,6 +94,42 @@
 }
 
 .msgContent{
-  scroll-behavior: smooth; 
-  overflow-y: scroll;
+  overflow-y:scroll;
+  height:900px
+}
+
+.title{
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+  height: 50px;
+  background: var(--primary-default-color);
+  width: 100%;
+  color: #ffffff;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.titleText{
+  margin: 0 0.5em;
+}
+.editIcon{
+  fill: var(--primary-default-color);
+  padding: 5px;
+}
+
+.circle{
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-left: 1.5em;
 }
