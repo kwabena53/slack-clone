@@ -41,78 +41,6 @@
 
 }
 
-.nav {
-    margin-top: 1em;
-}
-
-.menuItem {
-    /* margin: 0.3em 1em; */
-    color: rgb(255, 255, 255, 0.7);
-    padding: 0.3em 0;
-    width: 100%;
-    font-size: 15px;
-}
-
-.menuIcon {
-    margin-right: 0.5em;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.menuParent {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    color: rgb(255, 255, 255, 0.7);
-    padding: 0.3em 0;
-    width: 100%;
-    font-size: 15px;
-}
-
-button.menuItem{
-  background: transparent;
-  border: none;
-}
-
-button.menuItem:focus-within{
-  background: #1264A2;
-  color: rgb(255, 255, 255);
-}
-.subMenu{
-  margin-left: 2em;
-  display: flex;
-  align-items: center;
-}
-
-
-
-
-
-.dpIcon{
-  margin-right: 0.5em;
-  border: none;
-  background-color: transparent;
-  border-radius: 3px;
-  padding: 5px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navIcon {
-    fill: rgb(255, 255, 255, 0.7);
-}
-
-
-.navItem {
-    margin-left: 1em;
-    display: flex;
-    align-items: center;
-}
 
 
 .menuItem:hover {
@@ -128,10 +56,6 @@ button.menuItem:focus-within{
     background: gray;
 }
 
-.fullcenter {
-    
-    /* width: 80%; */
-}
 
 .contentHeader {
     width: 100%;

@@ -2,7 +2,9 @@
 import '../../App.css'
 import './MenuDropdown.css'
 import React, {useState} from 'react';
-import {ArrowRightBold} from '../../Components/Icons/SlackCloneIcons';
+import {AddIcon, ArrownDownBold, MenuIcon} from '../../Components/Icons/SlackCloneIcons';
+import DirectMessageMenuItem from './DirectMessageMenuItem';
+import ChannelMenuItem from './ChannelMenuItem';
 const MenuDropdown = ({title})=>{
 
     const [show, setShow] = useState(true)
@@ -12,34 +14,23 @@ const MenuDropdown = ({title})=>{
     }
     
     let active = show ? "" : "close"
-    
+    let rotate = show ? "" : "rotate"
+
     return(
         <>
         <div className="menuParent">
               <div className="navItem">
-                <div> <button onClick={handleMenuClick}  className="dropdownMenuIcon dpIcon"><ArrowRightBold className="navIcon" height="1em" /> </button> </div>
+                <div className="navHeader"> <button onClick={handleMenuClick}  className={`dropdownMenuIcon dpIcon ${rotate}`}><ArrownDownBold className="navIcon" height="1em" /> </button> </div>
                 <div  >{title}</div>
+                <div className="leftIcons">
+                    <div className="leftIcon dropdownMenuIcon dpIcon"> <MenuIcon width="1em" className="navIcon" height="1em"/> </div>
+                    <div className="leftIcon dropdownMenuIcon dpIcon"><AddIcon width="1.2em" className="navIcon" height="1.2em" /></div>
+                </div>
               </div>
         </div>
         <div className={`subContainer ${active}`} >
-        <button className="menuItem">
-                <div className="subMenu">
-                  <span className="menuIcon"> #</span>
-                  Announcement
-                </div>
-              </button>
-              <button className="menuItem">
-                <div className="subMenu">
-                  <span className="menuIcon"> #</span>
-                  community
-                </div>
-              </button>
-              <button className="menuItem">
-                <div aria-selected="true" aria-posinset="2" role="treeitem" aria-level="2" className="subMenu">
-                  <span className="menuIcon"> #</span>
-                  ms-information-technology
-                </div>
-            </button>
+            <DirectMessageMenuItem title="Jenifer" />
+            <ChannelMenuItem title="Announcement" />
         </div>
                 
         </>

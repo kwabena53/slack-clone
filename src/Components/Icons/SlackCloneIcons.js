@@ -77,7 +77,7 @@ export const ThreadIcon = ({ width, height, className }) => {
 
 export const MenuIcon = ({ width, height, className }) => {
     return (
-        <svg width={width} height={height} stroke="#ffffff" className={className} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg width={width} height={height} fill="#ffffff" stroke="#ffffff" className={className} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 24 24" enableBackground="new 0 0 24 24;" xmlSpace="preserve">
             <circle cx="12" cy="3" r="1.1" />
             <circle cx="12" cy="12" r="1.1" />
@@ -86,11 +86,22 @@ export const MenuIcon = ({ width, height, className }) => {
     )
 }
 
+export const AddIcon = ({width, height, className})=>{
+    return(
+        <svg width={width} height={height} className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 12H18" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 18V6" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+
+}
+
 export const ArrownDownBold = ({ width, height, className })=>{
      return(
         <svg width={width} height={height} className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z"/>
         </svg>
+        
      )
 }
 

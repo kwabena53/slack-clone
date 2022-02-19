@@ -9,6 +9,124 @@
     border-radius: 3px;
 }
 
-.dropdownMenuIcon:focus {
-    transform: rotate(90deg);
+.rotate {
+    transform: rotate(-90deg);
 }
+
+
+
+
+.navItem {
+    margin: 0 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.leftIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    visibility: hidden;
+}
+.navItem:hover .leftIcons{
+    visibility: visible;
+}
+
+
+.imgIcon{
+    width: fit-content;
+    height: 22px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.online-icon{
+    position: relative;
+    border-radius: 100%;
+    width: 7px;
+    height: 7px;
+    left: -5px;
+    top: 2px;
+    background: green;
+    border: 2px solid var(--primary-default-color);
+}
+
+.dmIcon{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+
+
+
+
+.nav {
+    margin-top: 1em;
+}
+
+.menuItem {
+    /* margin: 0.3em 1em; */
+    color: rgb(255, 255, 255, 0.7);
+    padding: 0.3em 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+.menuIcon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.menuParent {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: rgb(255, 255, 255, 0.7);
+    padding: 0.3em 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+button.menuItem{
+  background: transparent;
+  border: none;
+}
+
+button.menuItem:focus-within{
+  background: #1264A2;
+  color: rgb(255, 255, 255);
+}
+.subMenu{
+  margin-left: 2em;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+.dpIcon{
+  margin-right: 0.5em;
+  border: none;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navIcon {
+    fill: rgb(255, 255, 255, 0.7);
+}
+
+
