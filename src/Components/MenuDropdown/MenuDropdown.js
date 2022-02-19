@@ -24,7 +24,7 @@ const MenuDropdown = ({title})=>{
                 <div  >{title}</div>
                 <div className="leftIcons">
                     <div className="leftIcon dropdownMenuIcon dpIcon"> <MenuIcon width="1em" className="navIcon" height="1em"/> </div>
-                    <div className="leftIcon dropdownMenuIcon dpIcon"><AddIcon width="1.2em" className="navIcon" height="1.2em" /></div>
+                    <div className="leftIcon dropdownMenuIcon dpIcon"><AddIcon width="1.2em" color="#ffffff" className="navIcon" height="1.2em" /></div>
                 </div>
               </div>
         </div>

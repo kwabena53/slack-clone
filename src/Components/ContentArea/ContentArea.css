@@ -14,13 +14,62 @@
 }
 .contentFooter {
     position: fixed;
-    bottom: 0;
-    background: gray;
-    width: 100%;
+    bottom: 30px;
+    width: 78%;
     height: 133px;
 }
 
-.msgContent{
-    /* padding: 0.5em 2em; */
-    /* margin-top: 3em; */
+.input-area{
+    /* width: 100%; */
+    height: 100%;
 }
+.text-area{
+    margin: 0 2em ;
+    border-radius: 15px;
+    background: white;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+.edit-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F8F8F8;
+    padding: 0.2em 1em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    min-height: 30px;
+}
+
+.note-area{
+    outline: none;
+    padding: 1em;
+    color: black;
+    /* min-height: 100px; */
+}
+
+.lower-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2em 1em;
+    min-height: 30px;
+}
+
+.lower-left-icons, .lower-right-icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.sl-icon:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  
+  .sl-icon{
+    padding: 0.2em 0.6em;
+  }
+  
