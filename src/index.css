@@ -29,3 +29,8 @@ code {
   fill: #ffffff;
 }
 
+.slack-h3{
+  font-weight: bold;
+  line-height: 5px;
+  /* line-height: 19px; */
+}

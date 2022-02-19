@@ -3,6 +3,7 @@ import React from 'react';
 import SearchInput from '../Components/SearchInput/SearchInput';
 import { ArrowDown, Clock, EditIcon, HelpIcon, MenuIcon, SlackConnect, ThreadIcon } from '../Components/Icons/SlackCloneIcons';
 import MenuDropdown from '../Components/MenuDropdown/MenuDropdown';
+import ContentArea from '../Components/ContentArea/ContentArea';
 
 const Homepage = () => {
 
@@ -57,40 +58,7 @@ const Homepage = () => {
         </div>
         <div className="resizer"> </div>
 
-        <div className="centerContent">
-          <div className="contentHeader">
-            kay
-          </div>
-          <div className="msgContent">
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-            <p style={{ marginTop: "20em" }}>
-              Hey everyone:v::skin-tone-5: My name is Sydney (She/Her). I am in my first year for the Master’s in Biology (non thesis) program on Tempe campus. I received my Bachelor’s in Animal Science from Tuskegee University this past May. I have been lately finding myself having the “imposter’s syndrome” mainly because of the culture shock; coming from predominantly black schools my whole life to a PWI takes a lot of adjusting to do. I’ve connected with one other black grad student here so far, so I am very excited to interact and meet with more of y’all!
-            </p>
-          </div>
-          <div className="contentFooter">
-            Chale
-          </div>
-        </div>
-        <div className="rightSider">
-
-        </div>
+       <ContentArea/>
       </div>
     </div>
   )

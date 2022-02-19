@@ -57,27 +57,11 @@
 }
 
 
-.contentHeader {
-    width: 100%;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-    background: white;
-    height: 50px;
-}
 
-.centerContent {
-    width: 100%;
-}
-.contentFooter {
-    position: fixed;
-    bottom: 0;
-    background: gray;
-    width: 100%;
-    height: 133px;
-}
 
 .msgContent {
     overflow-y: scroll;
-    height: 900px
+    height: 720px
 }
 
 .title {
