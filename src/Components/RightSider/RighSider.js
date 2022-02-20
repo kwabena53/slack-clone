@@ -5,9 +5,9 @@ import "./RightSider.css"
 
 
 
-const RightSider = ({closeSider})=>{
+const RightSider = ({closeSider, user, ...rest})=>{
     return(
-        <div className="rightSider">
+        <div {...rest} className="rightSider">
             <div className="contentHeader h-line">
                 <h3 className="slack-h3">Profile</h3>
                 <div onClick={()=>closeSider(false)} className="sl-icon">
@@ -19,11 +19,11 @@ const RightSider = ({closeSider})=>{
 
               
                 <div>
-                    <img className="profile-pic" src="https://randomuser.me/api/portraits/women/9.jpg" />
+                    <img className="profile-pic" src={user?.url}/>
                 </div>
                 <div>
                     <div className="user-name">
-                        <h3 className="slack-h3">Jenn Rode</h3> 
+                        <h3 className="slack-h3">{user?.name}</h3> 
                         </div>
                     <div className="online-status"></div>
                 </div>
@@ -54,7 +54,7 @@ const RightSider = ({closeSider})=>{
                         Display name
                     </div>
                     <div className="details-res">
-                        jbsarfo
+                    {user?.id}
                     </div>
                 </div>
                 <div>
@@ -70,7 +70,7 @@ const RightSider = ({closeSider})=>{
                         Email address
                     </div>
                     <div className="details-res">
-                        jbsarfo@asu.edu
+                    {user?.email}
                     </div>
                 </div>
                 <div>

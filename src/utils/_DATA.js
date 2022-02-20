@@ -255,37 +255,37 @@ const channels = {
 
 export const getUsers = ()=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(users), 1000)
+        setTimeout(()=>res(users), 250)
     })
 }
 
 export const getConvo = (user)=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(conversations[user]), 1000)
+        setTimeout(()=>res(conversations[user]), 250)
     })
 }
 
 export const getUser= (user)=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(users[user]), 1000)
+        setTimeout(()=>res(users[user]), 250)
     })
 }
 
 export const getChannels= ()=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(channels), 1000)
+        setTimeout(()=>res(channels), 250)
     })
 }
 
 export const getChannel= (channel)=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(channels[channel]), 1000)
+        setTimeout(()=>res(channels[channel]), 250)
     })
 }
 
 export const getRecentUsers = ()=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(recentConvos), 500)
+        setTimeout(()=>res(recentConvos), 250)
     })
 }
 
@@ -306,6 +306,6 @@ export const addConvo = (user, date, time, msg)=>{
                 }
             }
             res() 
-        }, 500)
+        }, 250)
     })
 }

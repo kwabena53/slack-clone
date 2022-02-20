@@ -3,7 +3,8 @@
 
 
 .rightSider{
-    width: 120%;
+    /* width: 120%; */
+    width: 399px;
     border-left: 1px solid rgb(0, 0, 0, 0.1);
 }
 

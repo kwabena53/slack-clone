@@ -7,17 +7,19 @@ import RightSider from "../RightSider/RighSider"
 import SkeletonLoader from "../SkeletonLoader"
 import "./ContentArea.css"
 
-const ContentArea = ({content}) => {
+const ContentArea = ({content, ...rest}) => {
    const dispatch =  useDispatch()
    const [msg, setMsg] = useState("")
 
+   useEffect(()=>{
     dispatch(getConversation(content)).then((val)=>{
         setMsg(val)
     })
 
+   },[dispatch,content])
+  
     return (
-        <div>
-            <div className="centerContent">
+            <div {...rest} className="centerContent">
                 <div className="contentHeader">
                     <h3 className="slack-h3">#general</h3>
                 </div>
@@ -30,7 +32,7 @@ const ContentArea = ({content}) => {
                            )
                        })
                        :
-                      ""
+                      <SkeletonLoader num={2}/>
                     }
                     
                    
@@ -78,9 +80,7 @@ const ContentArea = ({content}) => {
                     </div>
                 </div>
             </div>
-           
-        </div>
-    )
+               )
 }
 
 export default ContentArea
