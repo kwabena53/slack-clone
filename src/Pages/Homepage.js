@@ -5,10 +5,16 @@ import { ArrowDown, Clock, EditIcon, HelpIcon, MenuIcon, SlackConnect, ThreadIco
 import MenuDropdown from '../Components/MenuDropdown/MenuDropdown';
 import ContentArea from '../Components/ContentArea/ContentArea';
 import RightSider from '../Components/RightSider/RighSider';
+import { useSelector } from 'react-redux';
+import ChannelMenuItem from '../Components/MenuDropdown/ChannelMenuItem';
+import DirectMessageMenuItem from '../Components/MenuDropdown/DirectMessageMenuItem';
 
 const Homepage = () => {
 
   const [showSider, setSider] = useState(true)
+  const state = useSelector((state)=>state?.app)
+  const channels = state?.channels ? state?.channels : {}
+  const directMsg = state?.recent ? state?.recent : {}
 
   
   const handleShowRightSider = ()=>{
@@ -60,7 +66,28 @@ const Homepage = () => {
               </div>
             </div>
             
-            <MenuDropdown title="Channels"/>
+           
+                <MenuDropdown title="Channels"
+                children={
+                  Object.values(channels).map((channel)=>{
+                    return(
+                      <ChannelMenuItem key={channel?.id} name={channel?.name}  />
+                    )
+                  })
+                }
+                />
+
+              <MenuDropdown title="Direct Messages"
+                children={
+                  Object.values(directMsg).map((user)=>{
+                    return(
+                      <DirectMessageMenuItem key={user?.id} user={user}  />
+                    )
+                  })    
+                }
+                />
+             
+            
 
           </div>
         </div>

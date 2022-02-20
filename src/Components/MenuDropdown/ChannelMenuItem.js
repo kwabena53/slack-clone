@@ -3,12 +3,12 @@ import '../../App.css'
 import './MenuDropdown.css'
 
 
-const ChannelMenuItem = ({title})=>{
+const ChannelMenuItem = ({name})=>{
     return(
             <button className="menuItem">
                 <div className="subMenu">
                   <span className="menuIcon"> #</span>
-                  {title}
+                  {name}
                 </div>
             </button>
               

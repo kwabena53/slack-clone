@@ -162,56 +162,66 @@ const conversations = {
 
 const channels = {
     "Announcements":{
-        "2022-02-15":{
-            0:{
-                "user": "jbsarfo",
-                "created_at" : "2022-02-15T11:11:05.000000Z",
-                "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+        "id":"Announcements",
+        "name": "Announcements",
+        "msg": {
+            "2022-02-15":{
+                0:{
+                    "user": "jbsarfo",
+                    "created_at" : "2022-02-15T11:11:05.000000Z",
+                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                },
+                1:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-15T11:18:05.000000Z",
+                    "message": "Hey Jenn, sure! Which kind of help?"
+                },
+                2:{
+                    "user": "jbsarfo",
+                    "created_at" : "2022-02-19T11:21:05.000000Z",
+                    "message": "Yeah. How to be confident."
+                },
+                3:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-19T11:23:05.000000Z",
+                    "message": "I gotcha!"
+                },
             },
-            1:{
-                "user": "bevans",
-                "created_at" : "2022-02-15T11:18:05.000000Z",
-                "message": "Hey Jenn, sure! Which kind of help?"
-            },
-            2:{
-                "user": "jbsarfo",
-                "created_at" : "2022-02-19T11:21:05.000000Z",
-                "message": "Yeah. How to be confident."
-            },
-            3:{
-                "user": "bevans",
-                "created_at" : "2022-02-19T11:23:05.000000Z",
-                "message": "I gotcha!"
-            },
-        },
-        "2022-02-16":{
-            0:{
-                "user": "jbsarfo",
-                "created_at" : "2022-02-15T11:11:05.000000Z",
-                "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-            },
+            "2022-02-16":{
+                0:{
+                    "user": "jbsarfo",
+                    "created_at" : "2022-02-15T11:11:05.000000Z",
+                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                },
+            }
         }
+       
     },
     "new-hires":{
-        "2022-02-15":{
-            0:{
-                "user": "bevans",
-                "created_at" : "2022-02-15T11:11:05.000000Z",
-                "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+        "id":"new-hires",
+        "name": "new-hires",
+        "msg":{
+            "2022-02-15":{
+                0:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-15T11:11:05.000000Z",
+                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                },
+                1:{
+                    "user": "jbsarfo",
+                    "created_at" : "2022-02-15T11:11:05.000000Z",
+                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                },
             },
-            1:{
-                "user": "jbsarfo",
-                "created_at" : "2022-02-15T11:11:05.000000Z",
-                "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-            },
-        },
-        "2022-02-16":{
-            0:{
-                "user": "pdaniels",
-                "created_at" : "2022-02-15T11:11:05.000000Z",
-                "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-            },
+            "2022-02-16":{
+                0:{
+                    "user": "pdaniels",
+                    "created_at" : "2022-02-15T11:11:05.000000Z",
+                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                },
+            }
         }
+       
     }
 }
 

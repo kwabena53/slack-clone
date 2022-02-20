@@ -14,6 +14,9 @@
 }
 
 
+.menuTitle{
+    flex: 90%
+}
 
 
 .navItem {
@@ -49,8 +52,16 @@
     height: 7px;
     left: -5px;
     top: 2px;
+    
+}
+
+.active{
     background: green;
     border: 2px solid var(--primary-default-color);
+}
+.inactive{
+    border: 1px solid rgb(255, 255, 255, 0.7);
+    background: var(--primary-default-color);
 }
 
 .dmIcon{

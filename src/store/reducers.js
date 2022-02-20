@@ -4,7 +4,7 @@ import {reducer} from "../duck/reducers"
 
 
 const reducers = combineReducers({
-    reducer,
+    app:reducer,
 })
 
 export default reducers
