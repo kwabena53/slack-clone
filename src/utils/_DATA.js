@@ -90,43 +90,76 @@ const recentConvos = {
 
 const conversations = {
     "bsmall":{
-        "2022-02-19":{
-            0:{
-                "user": "bsmall",
-                "created_at" : "2022-02-19T11:11:05.000000Z",
-                "message": "Hey! are you in the office?"
-            },
-            1:{
-                "user": "bevans",
-                "created_at" : "2022-02-19T11:18:05.000000Z",
-                "message": "Yes. About to leave soon?"
-            },
-            2:{
-                "user": "bevans",
-                "created_at" : "2022-02-19T11:21:05.000000Z",
-                "message": "Can I help you in any way?"
-            },
-            3:{
-                "user": "bsmall",
-                "created_at" : "2022-02-19T11:23:05.000000Z",
-                "message": "Let's talk tomorrow then?"
-            },
-        }
-    },
-    "jbsarfo":{
-        "2022-02-12":{
-            0:{
-                "user": "jbsarfo",
-                "created_at" : "2022-02-12T11:11:05.000000Z",
-                "message": "Nice presentation, Bright"
-            },
-            1:{
-                "user": "bevans",
-                "created_at" : "2022-02-12T11:18:05.000000Z",
-                "message": "Thanks Jenn!"
+        0:{
+            "date": "2022-02-19",
+            "messages": {
+                0:{
+                    "user": "bsmall",
+                    "created_at" : "2022-02-19T11:11:05.000000Z",
+                    "message": "Hey! are you in the office?"
+                },
+                1:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-19T11:18:05.000000Z",
+                    "message": "Yes. About to leave soon?"
+                },
+                2:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-19T11:21:05.000000Z",
+                    "message": "Can I help you in any way?"
+                },
+                3:{
+                    "user": "bsmall",
+                    "created_at" : "2022-02-19T11:23:05.000000Z",
+                    "message": "Let's talk tomorrow then?"
+                },
             }
         },
-        "2022-02-15":{
+        1:{
+            "date": "2022-02-18",
+            "messages": {
+                0:{
+                    "user": "bsmall",
+                    "created_at" : "2022-02-18T11:11:05.000000Z",
+                    "message": "Hey! are you in the office?"
+                },
+                1:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-18T11:18:05.000000Z",
+                    "message": "Yes. About to leave soon?"
+                },
+                2:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-18T11:21:05.000000Z",
+                    "message": "Can I help you in any way?"
+                },
+                3:{
+                    "user": "bsmall",
+                    "created_at" : "2022-02-18T11:23:05.000000Z",
+                    "message": "Let's talk tomorrow then?"
+                },
+            }
+        },
+    },
+    "jbsarfo":{
+        0:{
+            "date": "2022-02-12",
+            "messages": {
+                0:{
+                    "user": "jbsarfo",
+                    "created_at" : "2022-02-12T11:11:05.000000Z",
+                    "message": "Nice presentation, Bright"
+                },
+                1:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-12T11:18:05.000000Z",
+                    "message": "Thanks Jenn!"
+                }
+            }
+        },
+      1:{
+        "date": "2022-02-15",
+        "messages": {
             0:{
                 "user": "jbsarfo",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
@@ -148,6 +181,8 @@ const conversations = {
                 "message": "I gotcha!"
             },
         }
+      }
+        
     },
 }
 

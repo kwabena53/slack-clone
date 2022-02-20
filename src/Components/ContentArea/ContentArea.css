@@ -11,6 +11,7 @@
 
 .centerContent {
     width: auto;
+    min-width: 973.63px;
 }
 .contentFooter {
     bottom: 30px;

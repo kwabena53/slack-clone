@@ -4,6 +4,7 @@ import { getConversation } from "../../duck/actions"
 import { AddIcon, CodeIcon, LinkIcon, MicrophoneIcon, SendIcon, TextAlignIcon, TextBoldIcon, TextItalicIcon, VideoIcon } from "../Icons/SlackCloneIcons"
 import Message from "../Message/Message"
 import RightSider from "../RightSider/RighSider"
+import SkeletonLoader from "../SkeletonLoader"
 import "./ContentArea.css"
 
 const ContentArea = ({content}) => {
@@ -21,13 +22,18 @@ const ContentArea = ({content}) => {
                     <h3 className="slack-h3">#general</h3>
                 </div>
                 <div className="msgContent">
-                    <Message />
-                    <Message />
-                    <Message />
-                    <Message />
-                    <Message />
-                    {/* <Message/>
-           <Message/> */}
+                    {
+                        msg ?
+                       Object.values(msg).map((item)=>{
+                           return(
+                            <Message key={item?.date} date={item?.date} messages={item?.messages} />
+                           )
+                       })
+                       :
+                      ""
+                    }
+                    
+                   
 
                 </div>
                 <div className="contentFooter">

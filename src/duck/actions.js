@@ -1,4 +1,4 @@
-import { getChannels, getConvo, getRecentUsers } from "../utils/_DATA"
+import { getChannels, getConvo, getRecentUsers, getUsers } from "../utils/_DATA"
 import {
 
 GET_RECENT_CONVOS,
@@ -16,14 +16,17 @@ export const getInitialData = ()=>{
         try {
            return Promise.all([
                getRecentUsers(),
+               getUsers(),
                getChannels(),
                
            ]).then(([
                users,
+               allUsers,
                channels
            ]) =>{
                return(
                 dispatch(_getRecentUsers(users)),
+                dispatch(_getUsers(allUsers)),
                 dispatch(_getChannels(channels))
                ) 
            })
@@ -38,6 +41,13 @@ export const getConversation = (user)=>{
         return getConvo(user).then((data)=>{
            return data
         })
+    }
+}
+
+export const _getUsers = (data)=>{
+    return{
+        type: GET_USERS,
+        data: data
     }
 }
 
