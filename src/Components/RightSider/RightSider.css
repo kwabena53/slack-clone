@@ -1,0 +1,74 @@
+
+
+
+
+.rightSider{
+    width: 120%;
+    border-left: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.rightsider-content{
+    margin: 1em;
+}
+
+.profile-pic{
+    width: 256px;
+    height: 256px;
+    border-radius: 4px;
+}
+
+.prof-img{
+    object-fit: fill;
+}
+
+.profile-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-action-icons{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+}
+
+.profile-icon-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+.round-circle{
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 0, 0, 0.05);
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-circle:hover{
+    background: rgb(0, 0, 0, 0.1);
+}
+
+.profile-icon-name{
+    font-size: 13px;
+    color: rgb(0, 0, 0, 0.5);
+    margin-top: 0.5em;
+}
+
+.personal-section{
+    margin-top: 3em;
+}
+
+.details-title{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 1em;
+}

@@ -4,6 +4,7 @@ import SearchInput from '../Components/SearchInput/SearchInput';
 import { ArrowDown, Clock, EditIcon, HelpIcon, MenuIcon, SlackConnect, ThreadIcon } from '../Components/Icons/SlackCloneIcons';
 import MenuDropdown from '../Components/MenuDropdown/MenuDropdown';
 import ContentArea from '../Components/ContentArea/ContentArea';
+import RightSider from '../Components/RightSider/RighSider';
 
 const Homepage = () => {
 
@@ -46,7 +47,7 @@ const Homepage = () => {
               </div>
               <div className="menuItem">
                 <div className="navItem">
-                  <span className="menuIcon"> <MenuIcon width="1em" height="1em" /></span>
+                  <span className="menuIcon"> <MenuIcon width="1em" color="rgb(255, 255, 255, 0.7)" height="1em" /></span>
                   More
                 </div>
               </div>
@@ -59,6 +60,7 @@ const Homepage = () => {
         <div className="resizer"> </div>
 
        <ContentArea/>
+       <RightSider/>
       </div>
     </div>
   )

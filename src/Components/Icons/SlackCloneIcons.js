@@ -161,14 +161,45 @@ export const ThreadIcon = ({ width, height, className }) => {
     )
 }
 
-export const MenuIcon = ({ width, height, className }) => {
+export const MenuIcon = ({ width, height, color, className }) => {
     return (
-        <svg width={width} height={height} fill="#ffffff" stroke="#ffffff" className={className} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg width={width} height={height} fill={color} stroke={color} className={className} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 24 24" enableBackground="new 0 0 24 24;" xmlSpace="preserve">
             <circle cx="12" cy="3" r="1.1" />
             <circle cx="12" cy="12" r="1.1" />
             <circle cx="12" cy="21" r="1.1" />
         </svg>
+    )
+}
+
+
+
+export const CloseIcon = ({ width, height, color, className }) => {
+    return (
+        <svg width={width} height={height}  fill="none" className={className} version="1.1"  xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" enableBackground="new 0 0 24 24;" xmlSpace="preserve">
+            <path d="M9.16998 14.83L14.83 9.17004" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M14.83 14.83L9.16998 9.17004" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const HeadphoneIcon = ({width, height, color})=>{
+    return(
+        <svg width={width} height={height}  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.46005 18.49V15.57C5.46005 14.6 6.22005 13.73 7.30005 13.73C8.27005 13.73 9.14005 14.49 9.14005 15.57V18.38C9.14005 20.33 7.52005 21.9501 5.57005 21.9501C3.62005 21.9501 2.00005 20.32 2.00005 18.38V12.22C1.89005 6.60005 6.33005 2.05005 11.95 2.05005C17.57 2.05005 22 6.60005 22 12.11V18.2701C22 20.2201 20.38 21.84 18.43 21.84C16.48 21.84 14.86 20.2201 14.86 18.2701V15.46C14.86 14.49 15.62 13.62 16.7 13.62C17.67 13.62 18.54 14.38 18.54 15.46V18.49" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+    )
+}
+
+export const MessageIcon = ({width, height, color})=>{
+    return(
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 10.5H15.5" stroke={color} strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M7 18.4299H11L15.45 21.39C16.11 21.83 17 21.3599 17 20.5599V18.4299C20 18.4299 22 16.4299 22 13.4299V7.42993C22 4.42993 20 2.42993 17 2.42993H7C4 2.42993 2 4.42993 2 7.42993V13.4299C2 16.4299 4 18.4299 7 18.4299Z" stroke={color} strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
     )
 }
 

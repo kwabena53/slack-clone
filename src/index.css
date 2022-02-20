@@ -35,3 +35,20 @@ code {
   /* line-height: 19px; */
 }
 
+
+.contentHeader{
+  width: 100%;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  background: white;
+  height: 50px;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.h-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

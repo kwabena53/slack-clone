@@ -1,6 +1,7 @@
 import React from "react"
 import { AddIcon, CodeIcon, LinkIcon, MicrophoneIcon, SendIcon, TextAlignIcon, TextBoldIcon, TextItalicIcon, VideoIcon } from "../Icons/SlackCloneIcons"
 import Message from "../Message/Message"
+import RightSider from "../RightSider/RighSider"
 import "./ContentArea.css"
 
 const ContentArea = () => {
@@ -58,14 +59,11 @@ const ContentArea = () => {
                                     <SendIcon width="1em" height="1em" color="gray" />
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="rightSider">
-
-            </div>
+           
         </div>
     )
 }
