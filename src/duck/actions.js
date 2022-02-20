@@ -1,4 +1,4 @@
-import { getChannels, getRecentUsers } from "../utils/_DATA"
+import { getChannels, getConvo, getRecentUsers } from "../utils/_DATA"
 import {
 
 GET_RECENT_CONVOS,
@@ -17,6 +17,7 @@ export const getInitialData = ()=>{
            return Promise.all([
                getRecentUsers(),
                getChannels(),
+               
            ]).then(([
                users,
                channels
@@ -29,6 +30,14 @@ export const getInitialData = ()=>{
         } catch (error) {
             console.log(error)
         }
+    }
+}
+
+export const getConversation = (user)=>{
+    return async ()=>{
+        return getConvo(user).then((data)=>{
+           return data
+        })
     }
 }
 

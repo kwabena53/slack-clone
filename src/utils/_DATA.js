@@ -78,21 +78,13 @@ const recentConvos = {
         workspaces:['EdPlus at ASU', 'ASU Community'],
         active: true
     },
-    jrode1: {
-        id: 'jrode1',
-        name: 'Jane Rode',
-        url: 'https://randomuser.me/api/portraits/women/27.jpg',
-        email: 'jrode1@asu.edu',
+    bsmall: {
+        id: 'bsmall',
+        name: 'Bryan Small',
+        url: 'https://randomuser.me/api/portraits/men/21.jpg',
+        email: 'jbsarfo@asu.edu',
         workspaces:['EdPlus at ASU', 'ASU Community'],
         active: true
-    },
-    pdaniels: {
-        id: 'pdaniels',
-        name: 'Prince Daniels',
-        url: 'https://randomuser.me/api/portraits/men/11.jpg',
-        email: 'pdaniels@asu.edu',
-        workspaces:['EdPlus at ASU'],
-        active: false
     },
 }
 
@@ -228,7 +220,7 @@ const channels = {
 
 export const getUsers = ()=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(...users), 1000)
+        setTimeout(()=>res(users), 1000)
     })
 }
 

@@ -48,8 +48,6 @@
 .online-icon{
     position: relative;
     border-radius: 100%;
-    width: 7px;
-    height: 7px;
     left: -5px;
     top: 2px;
     
@@ -58,8 +56,12 @@
 .active{
     background: green;
     border: 2px solid var(--primary-default-color);
+    width: 7px;
+    height: 7px;
 }
 .inactive{
+    width: 6px;
+    height: 6px;
     border: 1px solid rgb(255, 255, 255, 0.7);
     background: var(--primary-default-color);
 }

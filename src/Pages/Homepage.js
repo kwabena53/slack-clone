@@ -12,6 +12,7 @@ import DirectMessageMenuItem from '../Components/MenuDropdown/DirectMessageMenuI
 const Homepage = () => {
 
   const [showSider, setSider] = useState(true)
+  const [content, setContent] = useState("")
   const state = useSelector((state)=>state?.app)
   const channels = state?.channels ? state?.channels : {}
   const directMsg = state?.recent ? state?.recent : {}
@@ -21,6 +22,9 @@ const Homepage = () => {
     setSider(true)
   }
 
+  const handleViewConversation = (val)=>{
+    setContent(val)
+  }
 
   return (
     <div className="container">
@@ -71,7 +75,8 @@ const Homepage = () => {
                 children={
                   Object.values(channels).map((channel)=>{
                     return(
-                      <ChannelMenuItem key={channel?.id} name={channel?.name}  />
+                      
+                      <ChannelMenuItem onClick={()=>handleViewConversation(channel?.id)} key={channel?.id} name={channel?.name}  />
                     )
                   })
                 }
@@ -81,7 +86,7 @@ const Homepage = () => {
                 children={
                   Object.values(directMsg).map((user)=>{
                     return(
-                      <DirectMessageMenuItem key={user?.id} user={user}  />
+                      <DirectMessageMenuItem onClick={()=>handleViewConversation(user?.id)} key={user?.id} user={user}  />
                     )
                   })    
                 }
@@ -93,7 +98,7 @@ const Homepage = () => {
         </div>
         <div className="resizer"> </div>
 
-       <ContentArea/>
+       <ContentArea content={content} />
 
        {showSider?<RightSider closeSider={setSider} />: ""}
       </div>

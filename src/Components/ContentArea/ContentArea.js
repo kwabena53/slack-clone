@@ -1,10 +1,19 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
+import { getConversation } from "../../duck/actions"
 import { AddIcon, CodeIcon, LinkIcon, MicrophoneIcon, SendIcon, TextAlignIcon, TextBoldIcon, TextItalicIcon, VideoIcon } from "../Icons/SlackCloneIcons"
 import Message from "../Message/Message"
 import RightSider from "../RightSider/RighSider"
 import "./ContentArea.css"
 
-const ContentArea = () => {
+const ContentArea = ({content}) => {
+   const dispatch =  useDispatch()
+   const [msg, setMsg] = useState("")
+
+    dispatch(getConversation(content)).then((val)=>{
+        setMsg(val)
+    })
+
     return (
         <div>
             <div className="centerContent">
@@ -41,7 +50,7 @@ const ContentArea = () => {
                             </div>
 
                         </div>
-                        <div className="note-area" placeholder="Message Jenn Rode" contentEditable="true"> <span style={{ color: "gray" }} >Message Jenn Rode</span></div>
+                        <div className="note-area" placeholder="Message Jenn Rode" suppressContentEditableWarning={true} contentEditable="true"> <span style={{ color: "gray" }} >Message Jenn Rode</span></div>
                         <div className="lower-icons">
                             <div className="lower-left-icons">
                                 <div className="sl-icon">
