@@ -1,5 +1,5 @@
 import '../App.css'
-import React from 'react';
+import React, { useState } from 'react';
 import SearchInput from '../Components/SearchInput/SearchInput';
 import { ArrowDown, Clock, EditIcon, HelpIcon, MenuIcon, SlackConnect, ThreadIcon } from '../Components/Icons/SlackCloneIcons';
 import MenuDropdown from '../Components/MenuDropdown/MenuDropdown';
@@ -8,7 +8,14 @@ import RightSider from '../Components/RightSider/RighSider';
 
 const Homepage = () => {
 
+  const [showSider, setSider] = useState(true)
+
   
+  const handleShowRightSider = ()=>{
+    setSider(true)
+  }
+
+
   return (
     <div className="container">
       <div className="topHeader">
@@ -60,7 +67,8 @@ const Homepage = () => {
         <div className="resizer"> </div>
 
        <ContentArea/>
-       <RightSider/>
+
+       {showSider?<RightSider closeSider={setSider} />: ""}
       </div>
     </div>
   )

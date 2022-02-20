@@ -5,12 +5,12 @@ import "./RightSider.css"
 
 
 
-const RightSider = ()=>{
+const RightSider = ({closeSider})=>{
     return(
         <div className="rightSider">
             <div className="contentHeader h-line">
                 <h3 className="slack-h3">Profile</h3>
-                <div className="sl-icon">
+                <div onClick={()=>closeSider(false)} className="sl-icon">
                     <CloseIcon width="2em" height="2em" color="black" />
                 </div>
             </div>

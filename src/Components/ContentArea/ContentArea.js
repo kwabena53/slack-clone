@@ -41,7 +41,7 @@ const ContentArea = () => {
                             </div>
 
                         </div>
-                        <div className="note-area" placeholder="Message Jenn Rode" contenteditable="true"> <span style={{ color: "gray" }} >Message Jenn Rode</span></div>
+                        <div className="note-area" placeholder="Message Jenn Rode" contentEditable="true"> <span style={{ color: "gray" }} >Message Jenn Rode</span></div>
                         <div className="lower-icons">
                             <div className="lower-left-icons">
                                 <div className="sl-icon">
