@@ -69,22 +69,53 @@ const users = {
 }
 // "2021-08-29T11:11:05.000000Z"
 
+const recentConvos = {
+    jbsarfo: {
+        id: 'jbsarfo',
+        name: 'Jennifer Sarfo',
+        url: 'https://randomuser.me/api/portraits/women/81.jpg',
+        email: 'jbsarfo@asu.edu',
+        workspaces:['EdPlus at ASU', 'ASU Community'],
+        active: true
+    },
+    jrode1: {
+        id: 'jrode1',
+        name: 'Jane Rode',
+        url: 'https://randomuser.me/api/portraits/women/27.jpg',
+        email: 'jrode1@asu.edu',
+        workspaces:['EdPlus at ASU', 'ASU Community'],
+        active: true
+    },
+    pdaniels: {
+        id: 'pdaniels',
+        name: 'Prince Daniels',
+        url: 'https://randomuser.me/api/portraits/men/11.jpg',
+        email: 'pdaniels@asu.edu',
+        workspaces:['EdPlus at ASU'],
+        active: false
+    },
+}
+
 const conversations = {
     "bsmall":{
         "2022-02-19":{
-            "bsmall":{
+            0:{
+                "user": "bsmall",
                 "created_at" : "2022-02-19T11:11:05.000000Z",
                 "message": "Hey! are you in the office?"
             },
-            "bevans":{
+            1:{
+                "user": "bevans",
                 "created_at" : "2022-02-19T11:18:05.000000Z",
                 "message": "Yes. About to leave soon?"
             },
-            "bevans":{
+            2:{
+                "user": "bevans",
                 "created_at" : "2022-02-19T11:21:05.000000Z",
                 "message": "Can I help you in any way?"
             },
-            "bsmall":{
+            3:{
+                "user": "bsmall",
                 "created_at" : "2022-02-19T11:23:05.000000Z",
                 "message": "Let's talk tomorrow then?"
             },
@@ -92,29 +123,35 @@ const conversations = {
     },
     "jbsarfo":{
         "2022-02-12":{
-            "jbsarfo":{
+            0:{
+                "user": "jbsarfo",
                 "created_at" : "2022-02-12T11:11:05.000000Z",
                 "message": "Nice presentation, Bright"
             },
-            "bevans":{
+            1:{
+                "user": "bevans",
                 "created_at" : "2022-02-12T11:18:05.000000Z",
                 "message": "Thanks Jenn!"
             }
         },
         "2022-02-15":{
-            "jbsarfo":{
+            0:{
+                "user": "jbsarfo",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
                 "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
-            "bevans":{
+            1:{
+                "user": "bevans",
                 "created_at" : "2022-02-15T11:18:05.000000Z",
                 "message": "Hey Jenn, sure! Which kind of help?"
             },
-            "jbsarfo":{
+            2:{
+                "user": "jbsarfo",
                 "created_at" : "2022-02-19T11:21:05.000000Z",
                 "message": "Yeah. How to be confident."
             },
-            "bsmbevansall":{
+            3:{
+                "user": "bevans",
                 "created_at" : "2022-02-19T11:23:05.000000Z",
                 "message": "I gotcha!"
             },
@@ -126,25 +163,30 @@ const conversations = {
 const channels = {
     "Announcements":{
         "2022-02-15":{
-            "jbsarfo":{
+            0:{
+                "user": "jbsarfo",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
                 "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
-            "bevans":{
+            1:{
+                "user": "bevans",
                 "created_at" : "2022-02-15T11:18:05.000000Z",
                 "message": "Hey Jenn, sure! Which kind of help?"
             },
-            "jbsarfo":{
+            2:{
+                "user": "jbsarfo",
                 "created_at" : "2022-02-19T11:21:05.000000Z",
                 "message": "Yeah. How to be confident."
             },
-            "bsmbevansall":{
+            3:{
+                "user": "bevans",
                 "created_at" : "2022-02-19T11:23:05.000000Z",
                 "message": "I gotcha!"
             },
         },
         "2022-02-16":{
-            "jbsarfo":{
+            0:{
+                "user": "jbsarfo",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
                 "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
@@ -152,25 +194,20 @@ const channels = {
     },
     "new-hires":{
         "2022-02-15":{
-            "jbsarfo":{
+            0:{
+                "user": "bevans",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
                 "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
-            "bevans":{
-                "created_at" : "2022-02-15T11:18:05.000000Z",
-                "message": "Hey Jenn, sure! Which kind of help?"
-            },
-            "jbsarfo":{
-                "created_at" : "2022-02-19T11:21:05.000000Z",
-                "message": "Yeah. How to be confident."
-            },
-            "bsmbevansall":{
-                "created_at" : "2022-02-19T11:23:05.000000Z",
-                "message": "I gotcha!"
+            1:{
+                "user": "jbsarfo",
+                "created_at" : "2022-02-15T11:11:05.000000Z",
+                "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
         },
         "2022-02-16":{
-            "jbsarfo":{
+            0:{
+                "user": "pdaniels",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
                 "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
@@ -199,7 +236,7 @@ export const getUser= (user)=>{
 
 export const getChannels= ()=>{
     return new Promise((res, rej)=>{
-        setTimeout(()=>res(...channels), 1000)
+        setTimeout(()=>res(channels), 1000)
     })
 }
 
@@ -209,22 +246,29 @@ export const getChannel= (channel)=>{
     })
 }
 
+export const getRecentUsers = ()=>{
+    return new Promise((res, rej)=>{
+        setTimeout(()=>res(recentConvos), 500)
+    })
+}
+
 export const addConvo = (user, date, time, msg)=>{
     return new Promise((res, rej)=>{
-
-        conversations = {
-            ...conversations,
-            [user]:{
-                ...conversations.user,
-                [date]:{
-                    ...conversations.user.date,
-                    [authUser.id]:{
-                        "created_at" : time,
-                        "message": msg
-                    },
+        setTimeout(()=>{
+            conversations = {
+                ...conversations,
+                [user]:{
+                    ...conversations.user,
+                    [date]:{
+                        ...conversations.user.date,
+                        [authUser.id]:{
+                            "created_at" : time,
+                            "message": msg
+                        },
+                    }
                 }
             }
-        }
-        res()
+            res() 
+        }, 500)
     })
 }
