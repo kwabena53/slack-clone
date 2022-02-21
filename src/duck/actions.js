@@ -69,17 +69,22 @@ export const _getConvo=(data)=>{
 }
 
 export const _addConvo = (type, name, msg)=>{
-    return async()=>{
+    return async(dispatch)=>{
         try {
             const data = await addConvo(type, name, msg)
-            return{
-                type: ADD_CONVO,
-                data
-            }
+            console.log("msg: ",data)
+            dispatch(addConversations(data))
         } catch (error) {
             console.log(error)
         }
 
+    }
+}
+
+export const addConversations = (data)=>{
+    return{
+        type: ADD_CONVO,
+        data
     }
 }
 

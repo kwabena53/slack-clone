@@ -56,8 +56,27 @@ export const reducer = (state = INITIAL_STATE, action = { type: "" })=>{
                     convo:action.data
                 }
         case ADD_CONVO:
+            let user = action.data.user
+            let mDate = action.data.date
+            let myMsg = {
+                user: INITIAL_STATE.authUser.id,
+                message: action.data.message,
+                created_at: action.data.created_at
+            }
             return{
                 ...state,
+                convo:{
+                    ...state.convo,
+                    [user]:{
+                        ...state.convo[user],
+                        [mDate]:{
+                            ...state.convo[user][mDate],
+                            "date": mDate,
+                           messages:state?.convo[user][mDate]?.messages ? state?.convo[user][mDate]?.messages.concat(myMsg): [myMsg],
+                        }
+                    }
+           
+                }
 
             }
         default:
@@ -65,3 +84,4 @@ export const reducer = (state = INITIAL_STATE, action = { type: "" })=>{
     }
 
 }
+    

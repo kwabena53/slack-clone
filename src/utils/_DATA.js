@@ -92,78 +92,78 @@ const conversations = {
     "bsmall":{
         "2022-02-17":{
             "date": "2022-02-17",
-            "messages": {
-                0:{
+            "messages": [
+                {
                     "user": "bsmall",
                     "created_at" : "2022-02-17T11:11:05.000000Z",
                     "message": "Hey! are you in the office?"
                 },
-                1:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-17T11:18:05.000000Z",
                     "message": "Yes. About to leave soon?"
                 },
-                2:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-17T11:21:05.000000Z",
                     "message": "Can I help you in any way?"
                 },
-                3:{
+                {
                     "user": "bsmall",
                     "created_at" : "2022-02-17T11:23:05.000000Z",
                     "message": "Let's talk tomorrow then?"
                 },
-            }
+            ]
         },
         "2022-02-18":{
             "date": "2022-02-18",
-            "messages": {
-                0:{
+            "messages": [
+                {
                     "user": "bsmall",
                     "created_at" : "2022-02-18T11:11:05.000000Z",
                     "message": "Hey! are you in the office?"
                 },
-                1:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-18T11:18:05.000000Z",
                     "message": "Yes. About to leave soon?"
                 },
-                2:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-18T11:21:05.000000Z",
                     "message": "Can I help you in any way?"
                 },
-                3:{
+                {
                     "user": "bsmall",
                     "created_at" : "2022-02-18T11:23:05.000000Z",
                     "message": "Let's talk tomorrow then?"
                 },
-            }
+            ]
         },
         "2022-02-19":{
             "date": "2022-02-19",
-            "messages": {
-                0:{
+            "messages": [
+                {
                     "user": "bsmall",
                     "created_at" : "2022-02-19T11:11:05.000000Z",
                     "message": "Hey! are you in the office?"
                 },
-                1:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-19T11:18:05.000000Z",
                     "message": "Yes. About to leave soon?"
                 },
-                2:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-19T11:21:05.000000Z",
                     "message": "Can I help you in any way?"
                 },
-                3:{
+                {
                     "user": "bsmall",
                     "created_at" : "2022-02-19T11:23:05.000000Z",
                     "message": "Let's talk tomorrow then?"
                 },
-            }
+            ]
         },
        
         
@@ -171,43 +171,43 @@ const conversations = {
     "jbsarfo":{
         "2022-02-12":{
             "date": "2022-02-12",
-            "messages": {
-                0:{
+            "messages": [
+                {
                     "user": "jbsarfo",
                     "created_at" : "2022-02-12T11:11:05.000000Z",
                     "message": "Nice presentation, Bright"
                 },
-                1:{
+                {
                     "user": "bevans",
                     "created_at" : "2022-02-12T11:18:05.000000Z",
                     "message": "Thanks Jenn!"
                 }
-            }
+            ]
         },
         "2022-02-15":{
         "date": "2022-02-15",
-        "messages": {
-            0:{
+        "messages": [
+            {
                 "user": "jbsarfo",
                 "created_at" : "2022-02-15T11:11:05.000000Z",
                 "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
             },
-            1:{
+            {
                 "user": "bevans",
                 "created_at" : "2022-02-15T11:18:05.000000Z",
                 "message": "Hey Jenn, sure! Which kind of help?"
             },
-            2:{
+            {
                 "user": "jbsarfo",
                 "created_at" : "2022-02-19T11:21:05.000000Z",
                 "message": "Yeah. How to be confident."
             },
-            3:{
+            {
                 "user": "bevans",
                 "created_at" : "2022-02-19T11:23:05.000000Z",
                 "message": "I gotcha!"
             },
-        }
+        ]
       }
         
     },
@@ -376,55 +376,24 @@ export const getRecentUsers = ()=>{
 
 export const addConvo = (type, name, msg, )=>{
 
-    let date = new Date().toLocaleDateString()
-    date.replaceAll("/", "-")
+    let _date = new Date()
+    _date= _date.toISOString().split('T')[0]
+
     let time = new Date().toISOString()
+
+    let date = _date.toString()
 
 
     return new Promise((res, rej)=>{
         setTimeout(()=>{
             if(type === "dm"){
-                conversations = {
-                    ...conversations,
-                    [name]:{
-                        ...conversations.name,
-                        [date]:{
-                            ...conversations.name.date,
-                            "date": date,
-                            "messages":{
-                                ...conversations.name[date],
-                                "user": authUser.id,
-                                "created_at": time,
-                                "message": msg
-                            }
-                        }
-                    }
-                }
+               
             }else if(type== "channel"){
-                channels = {
-                    ...channels,
-                    [name]:{
-                        ...channels.name,
-                        content: {
-                            ...channels.name.content,
-                            [date]:{
-                                ...conversations.name.date,
-                                "date": date,
-                                "messages":{
-                                    ...conversations.name[date],
-                                    "user": authUser.id,
-                                    "created_at": time,
-                                    "message": msg
-                                }
-                            }
-                        }
-                    }
-                }
+                
             }
-           
             res({
-                    "date": date,
-                    "user": authUser.id,
+                    "date": _date,
+                    "user": name,
                     "created_at" : time,
                     "message": msg
             }) 

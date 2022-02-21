@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getConversation } from "../../duck/actions"
+import { getConversation, _addConvo } from "../../duck/actions"
 import { AddIcon, CodeIcon, LinkIcon, MicrophoneIcon, SendIcon, TextAlignIcon, TextBoldIcon, TextItalicIcon, VideoIcon } from "../Icons/SlackCloneIcons"
 import Message from "../Message/Message"
 import RightSider from "../RightSider/RighSider"
@@ -10,25 +10,23 @@ import "./ContentArea.css"
 const ContentArea = ({content, ...rest}) => {
    const dispatch =  useDispatch()
    const elementRef = useRef();
-
    const state = useSelector((state)=>state?.app?.convo)
-   const [msg, setMsg] = useState(state?state[content]: "")
    
 
-   const [inputVal, setInputVal] = useState("")
-
-    const handleInputChange = ()=>{
-        console.log("vsl",elementRef.current.innerHTML)
-    }
+ 
 
    useEffect(()=>{
        if(content){
         dispatch(getConversation(content))
-        setMsg(state[content])
        }
 
    },[dispatch,content])
   
+   const sendMessage =()=>{
+       console.log(elementRef.current.innerHTML)
+       dispatch(_addConvo("dm", "jbsarfo", elementRef.current.innerHTML))
+   }
+  let msg_ = state?state[content]: ""
     return (
             <div {...rest} className="centerContent">
                 <div className="contentHeader">
@@ -36,8 +34,8 @@ const ContentArea = ({content, ...rest}) => {
                 </div>
                 <div className="msgContent">
                     {
-                        msg ?
-                       Object.values(msg).map((item)=>{
+                        msg_ ?
+                       Object.values(msg_).map((item)=>{
                            return(
                             <Message key={item?.date} date={item?.date} messages={item?.messages} />
                            )
@@ -69,7 +67,7 @@ const ContentArea = ({content, ...rest}) => {
                             </div>
 
                         </div>
-                        <div className="note-area" placeholder="Message Jenn Rode" val={inputVal} ref={elementRef}  suppressContentEditableWarning={true} contentEditable="true"> {inputVal}</div>
+                        <div className="note-area" placeholder="Message Jenn Rode" ref={elementRef}  suppressContentEditableWarning={true} contentEditable="true"> {elementRef?.current?.innerHTML}</div>
                         <div className="lower-icons">
                             <div className="lower-left-icons">
                                 <div className="sl-icon">
@@ -83,8 +81,8 @@ const ContentArea = ({content, ...rest}) => {
                                 </div>
                             </div>
                             <div className="lower-right-icons">
-                            <div onClick={handleInputChange} className="sl-icon">
-                                    <SendIcon  width="1em" height="1em" color="gray" />
+                            <div onClick={sendMessage} className="sl-icon">
+                                    <SendIcon   width="1em" height="1em" color="gray" />
                                 </div>
                             </div>
                         </div>
