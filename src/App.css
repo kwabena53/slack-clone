@@ -45,6 +45,7 @@
 
 .menuItem:hover {
     background: var(--primary-dark-color);
+    color: rgb(255, 255, 255, 0.7);
 }
 
 
@@ -83,8 +84,11 @@
 }
 
 .titleText {
+
     margin: 0 0.5em;
 }
+
+
 .editIcon {
     fill: var(--primary-default-color);
     padding: 5px;
@@ -92,11 +96,11 @@
 
 .circle {
     border-radius: 100%;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1.5em;
+    margin: 0 0.5em;
 }

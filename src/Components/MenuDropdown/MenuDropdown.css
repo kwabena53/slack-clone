@@ -88,6 +88,14 @@
     font-size: 15px;
 }
 
+.menuItemDark{
+    color: var(--primary-default-color);
+}
+
+.menuItemLight{
+    color: rgb(255, 255, 255, 0.7);
+}
+
 .menuIcon {
     margin-right: 0.5em;
     width: 20px;

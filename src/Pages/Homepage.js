@@ -27,6 +27,9 @@ const Homepage = () => {
     setContent(val)
   }
 
+  const resetContentArea = ()=>{
+    setContent("")
+  }
   const rightSiderState = {
     setSider,
     setUser
@@ -43,8 +46,10 @@ const Homepage = () => {
           <div className="leftSider">
             <div className="title">
               <span className="titleText">ASU Engineering Students</span>
+              <div>
               <ArrowDown width="1em" height="1em" />
-              <div className="circle">
+              </div>
+              <div className="circle app-edit-icon">
                 <EditIcon width="1em" height="1em" classN="editIcon" />
               </div>
             </div>
@@ -57,9 +62,9 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div className="menuItem">
-                  <div className="navItem">
+                  <div onClick={()=>resetContentArea()}  className="navItem">
                     <span className="menuIcon">@</span>
-                    Mentions & Reactions
+                    All Direct Messages
                   </div>
                 </div>
                 <div className="menuItem">
@@ -104,7 +109,7 @@ const Homepage = () => {
           </div>
           <div className="resizer"> </div>
 
-          <ContentArea style={{width: showSider? "auto": "100%"}} content={content} />
+          <ContentArea style={{width: showSider? "auto": "100%"}} setContent={setContent} content={content} />
 
           {showSider ? <RightSider  closeSider={setSider} user={user} /> : ""}
         </div>

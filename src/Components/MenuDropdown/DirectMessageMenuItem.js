@@ -3,10 +3,11 @@ import '../../App.css'
 import './MenuDropdown.css'
 
 
-const DirectMessageMenuItem = ({user, ...rest})=>{
+const DirectMessageMenuItem = ({user, dark, ...rest})=>{
   const onlineStatus = user?.active? "active": "inactive"
+  const type = dark ? "menuItemDark" : "menuItemLight"
     return(
-            <button {...rest} className="menuItem">
+            <button {...rest} className={`menuItem ${type}`}>
                 <div className="subMenu">
                   <div className="menuIcon">
                       {/* <div className="imgIcon"> */}

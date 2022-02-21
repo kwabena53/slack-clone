@@ -5,6 +5,7 @@ GET_RECENT_CONVOS,
 GET_USERS,
 GET_USER,
  GET_CONVERSATION,
+ START_NEW_CONVO,
  ADD_CONVO,
  GET_CHANNELS,
  GET_CONVERSATIONS
@@ -41,6 +42,17 @@ export const getInitialData = ()=>{
     }
 }
 
+export const startConvo = (user)=>{
+   let  data = {
+        [user.id]:{
+            ...user
+        }
+    }
+    return{
+        type: START_NEW_CONVO,
+        data
+    }
+}
 export const getConversation = (user)=>{
     return async (dispatch)=>{
          return getConvo(user).then((data)=>{

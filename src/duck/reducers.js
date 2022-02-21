@@ -4,6 +4,7 @@ import {
     GET_USER,
     GET_CONVERSATIONS,
     ADD_CONVO,
+    START_NEW_CONVO,
      GET_CONVERSATION,
      GET_CHANNELS
     } from "./types"
@@ -31,6 +32,14 @@ export const reducer = (state = INITIAL_STATE, action = { type: "" })=>{
             return {
                 ...state,
                 channels: action.data
+            }
+        case START_NEW_CONVO:
+            return {
+                ...state,
+                recent: {
+                    ...state.recent,
+                    ...action.data
+                }
             }
         case GET_RECENT_CONVOS:
             return {
