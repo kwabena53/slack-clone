@@ -48,6 +48,8 @@
     outline: none;
     padding: 1em;
     color: black;
+    border: none;
+    min-width: 900px;
     /* min-height: 100px; */
 }
 

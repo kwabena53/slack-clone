@@ -11,9 +11,18 @@ const ContentArea = ({content, ...rest}) => {
    const dispatch =  useDispatch()
    const elementRef = useRef();
    const state = useSelector((state)=>state?.app?.convo)
+
+   const users = useSelector((state)=>state?.app?.users)
+
+   let user = users ? users[content] :""
+
+   const [inputVal, setInputVal] = useState("")
    
 
- 
+    const handleInputChange = (e)=>{
+        e.preventDefault()
+        setInputVal(e.target.value)
+    }
 
    useEffect(()=>{
        if(content){
@@ -21,16 +30,21 @@ const ContentArea = ({content, ...rest}) => {
        }
 
    },[dispatch,content])
+
+   const clearInputField = ()=>{
+     setInputVal("")
+   }
   
    const sendMessage =()=>{
        console.log(elementRef.current.innerHTML)
-       dispatch(_addConvo("dm", "jbsarfo", elementRef.current.innerHTML))
+       dispatch(_addConvo("dm", content, inputVal))
+       clearInputField()
    }
   let msg_ = state?state[content]: ""
     return (
             <div {...rest} className="centerContent">
                 <div className="contentHeader">
-                    <h3 className="slack-h3">#general</h3>
+                    <h3 className="slack-h3">{user?.name}</h3>
                 </div>
                 <div className="msgContent">
                     {
@@ -67,7 +81,7 @@ const ContentArea = ({content, ...rest}) => {
                             </div>
 
                         </div>
-                        <div className="note-area" placeholder="Message Jenn Rode" ref={elementRef}  suppressContentEditableWarning={true} contentEditable="true"> {elementRef?.current?.innerHTML}</div>
+                        <input onChange={handleInputChange} className="note-area" value={inputVal} placeholder={`Message ${user?.name}`} ref={elementRef} />
                         <div className="lower-icons">
                             <div className="lower-left-icons">
                                 <div className="sl-icon">
