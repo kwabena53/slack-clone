@@ -90,32 +90,32 @@ const recentConvos = {
 
 const conversations = {
     "bsmall":{
-        0:{
-            "date": "2022-02-19",
+        "2022-02-17":{
+            "date": "2022-02-17",
             "messages": {
                 0:{
                     "user": "bsmall",
-                    "created_at" : "2022-02-19T11:11:05.000000Z",
+                    "created_at" : "2022-02-17T11:11:05.000000Z",
                     "message": "Hey! are you in the office?"
                 },
                 1:{
                     "user": "bevans",
-                    "created_at" : "2022-02-19T11:18:05.000000Z",
+                    "created_at" : "2022-02-17T11:18:05.000000Z",
                     "message": "Yes. About to leave soon?"
                 },
                 2:{
                     "user": "bevans",
-                    "created_at" : "2022-02-19T11:21:05.000000Z",
+                    "created_at" : "2022-02-17T11:21:05.000000Z",
                     "message": "Can I help you in any way?"
                 },
                 3:{
                     "user": "bsmall",
-                    "created_at" : "2022-02-19T11:23:05.000000Z",
+                    "created_at" : "2022-02-17T11:23:05.000000Z",
                     "message": "Let's talk tomorrow then?"
                 },
             }
         },
-        1:{
+        "2022-02-18":{
             "date": "2022-02-18",
             "messages": {
                 0:{
@@ -140,9 +140,36 @@ const conversations = {
                 },
             }
         },
+        "2022-02-19":{
+            "date": "2022-02-19",
+            "messages": {
+                0:{
+                    "user": "bsmall",
+                    "created_at" : "2022-02-19T11:11:05.000000Z",
+                    "message": "Hey! are you in the office?"
+                },
+                1:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-19T11:18:05.000000Z",
+                    "message": "Yes. About to leave soon?"
+                },
+                2:{
+                    "user": "bevans",
+                    "created_at" : "2022-02-19T11:21:05.000000Z",
+                    "message": "Can I help you in any way?"
+                },
+                3:{
+                    "user": "bsmall",
+                    "created_at" : "2022-02-19T11:23:05.000000Z",
+                    "message": "Let's talk tomorrow then?"
+                },
+            }
+        },
+       
+        
     },
     "jbsarfo":{
-        0:{
+        "2022-02-12":{
             "date": "2022-02-12",
             "messages": {
                 0:{
@@ -157,7 +184,7 @@ const conversations = {
                 }
             }
         },
-      1:{
+        "2022-02-15":{
         "date": "2022-02-15",
         "messages": {
             0:{
@@ -189,64 +216,116 @@ const conversations = {
 
 const channels = {
     "Announcements":{
-        "id":"Announcements",
+        "id":"announcements",
         "name": "Announcements",
-        "msg": {
-            "2022-02-15":{
-                0:{
-                    "user": "jbsarfo",
-                    "created_at" : "2022-02-15T11:11:05.000000Z",
-                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-                },
-                1:{
-                    "user": "bevans",
-                    "created_at" : "2022-02-15T11:18:05.000000Z",
-                    "message": "Hey Jenn, sure! Which kind of help?"
-                },
-                2:{
-                    "user": "jbsarfo",
-                    "created_at" : "2022-02-19T11:21:05.000000Z",
-                    "message": "Yeah. How to be confident."
-                },
-                3:{
-                    "user": "bevans",
-                    "created_at" : "2022-02-19T11:23:05.000000Z",
-                    "message": "I gotcha!"
-                },
+        "content":{
+            "2022-02-12":{
+                "date": "2022-02-15",
+                "messages": {
+                    0:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-12T11:11:05.000000Z",
+                        "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                    },
+                    1:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-12T11:18:05.000000Z",
+                        "message": "Hey Jenn, sure! Which kind of help?"
+                    },
+                    2:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-12T11:21:05.000000Z",
+                        "message": "Yeah. How to be confident."
+                    },
+                    3:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-12T11:23:05.000000Z",
+                        "message": "I gotcha!"
+                    },
+                }
             },
-            "2022-02-16":{
-                0:{
-                    "user": "jbsarfo",
-                    "created_at" : "2022-02-15T11:11:05.000000Z",
-                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-                },
-            }
+            "2022-02-15":{
+                "date": "2022-02-15",
+                "messages": {
+                    0:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-15T11:11:05.000000Z",
+                        "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                    },
+                    1:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-15T11:18:05.000000Z",
+                        "message": "Hey Jenn, sure! Which kind of help?"
+                    },
+                    2:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-15T11:21:05.000000Z",
+                        "message": "Yeah. How to be confident."
+                    },
+                    3:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-15T11:23:05.000000Z",
+                        "message": "I gotcha!"
+                    },
+                }
+            },
         }
-       
     },
+  
     "new-hires":{
         "id":"new-hires",
         "name": "new-hires",
-        "msg":{
-            "2022-02-15":{
-                0:{
-                    "user": "bevans",
-                    "created_at" : "2022-02-15T11:11:05.000000Z",
-                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-                },
-                1:{
-                    "user": "jbsarfo",
-                    "created_at" : "2022-02-15T11:11:05.000000Z",
-                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-                },
+        "content":{
+            "2022-02-12":{
+                "date": "2022-02-15",
+                "messages": {
+                    0:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-12T11:11:05.000000Z",
+                        "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                    },
+                    1:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-12T11:18:05.000000Z",
+                        "message": "Hey Jenn, sure! Which kind of help?"
+                    },
+                    2:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-12T11:21:05.000000Z",
+                        "message": "Yeah. How to be confident."
+                    },
+                    3:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-12T11:23:05.000000Z",
+                        "message": "I gotcha!"
+                    },
+                }
             },
-            "2022-02-16":{
-                0:{
-                    "user": "pdaniels",
-                    "created_at" : "2022-02-15T11:11:05.000000Z",
-                    "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
-                },
-            }
+            "2022-02-15":{
+                "date": "2022-02-15",
+                "messages": {
+                    0:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-15T11:11:05.000000Z",
+                        "message": "Hey, Bright. I have an upcoming presesentation I want you to help me out"
+                    },
+                    1:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-15T11:18:05.000000Z",
+                        "message": "Hey Jenn, sure! Which kind of help?"
+                    },
+                    2:{
+                        "user": "jbsarfo",
+                        "created_at" : "2022-02-15T11:21:05.000000Z",
+                        "message": "Yeah. How to be confident."
+                    },
+                    3:{
+                        "user": "bevans",
+                        "created_at" : "2022-02-15T11:23:05.000000Z",
+                        "message": "I gotcha!"
+                    },
+                }
+            },
         }
        
     }
@@ -262,6 +341,12 @@ export const getUsers = ()=>{
 export const getConvo = (user)=>{
     return new Promise((res, rej)=>{
         setTimeout(()=>res(conversations[user]), 250)
+    })
+}
+
+export const getConvos = ()=>{
+    return new Promise((res, rej)=>{
+        setTimeout(()=>res(conversations), 250)
     })
 }
 
@@ -289,23 +374,60 @@ export const getRecentUsers = ()=>{
     })
 }
 
-export const addConvo = (user, date, time, msg)=>{
+export const addConvo = (type, name, msg, )=>{
+
+    let date = new Date().toLocaleDateString()
+    date.replaceAll("/", "-")
+    let time = new Date().toISOString()
+
+
     return new Promise((res, rej)=>{
         setTimeout(()=>{
-            conversations = {
-                ...conversations,
-                [user]:{
-                    ...conversations.user,
-                    [date]:{
-                        ...conversations.user.date,
-                        [authUser.id]:{
-                            "created_at" : time,
-                            "message": msg
-                        },
+            if(type === "dm"){
+                conversations = {
+                    ...conversations,
+                    [name]:{
+                        ...conversations.name,
+                        [date]:{
+                            ...conversations.name.date,
+                            "date": date,
+                            "messages":{
+                                ...conversations.name[date],
+                                "user": authUser.id,
+                                "created_at": time,
+                                "message": msg
+                            }
+                        }
+                    }
+                }
+            }else if(type== "channel"){
+                channels = {
+                    ...channels,
+                    [name]:{
+                        ...channels.name,
+                        content: {
+                            ...channels.name.content,
+                            [date]:{
+                                ...conversations.name.date,
+                                "date": date,
+                                "messages":{
+                                    ...conversations.name[date],
+                                    "user": authUser.id,
+                                    "created_at": time,
+                                    "message": msg
+                                }
+                            }
+                        }
                     }
                 }
             }
-            res() 
-        }, 250)
+           
+            res({
+                    "date": date,
+                    "user": authUser.id,
+                    "created_at" : time,
+                    "message": msg
+            }) 
+        }, 50)
     })
 }

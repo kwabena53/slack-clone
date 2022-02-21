@@ -12,7 +12,7 @@ const Message = ({date, messages})=>{
             </div>
             {Object.values(messages).map((userMsg)=>{
                 return(
-                    <UserMessage userMsg={userMsg} />
+                    <UserMessage key={userMsg?.created_at} userMsg={userMsg} />
                 )
             })}
            

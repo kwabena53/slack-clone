@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { useDispatch } from "react-redux"
+import React, { useEffect, useRef, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { getConversation } from "../../duck/actions"
 import { AddIcon, CodeIcon, LinkIcon, MicrophoneIcon, SendIcon, TextAlignIcon, TextBoldIcon, TextItalicIcon, VideoIcon } from "../Icons/SlackCloneIcons"
 import Message from "../Message/Message"
@@ -9,12 +9,23 @@ import "./ContentArea.css"
 
 const ContentArea = ({content, ...rest}) => {
    const dispatch =  useDispatch()
-   const [msg, setMsg] = useState("")
+   const elementRef = useRef();
+
+   const state = useSelector((state)=>state?.app?.convo)
+   const [msg, setMsg] = useState(state?state[content]: "")
+   
+
+   const [inputVal, setInputVal] = useState("")
+
+    const handleInputChange = ()=>{
+        console.log("vsl",elementRef.current.innerHTML)
+    }
 
    useEffect(()=>{
-    dispatch(getConversation(content)).then((val)=>{
-        setMsg(val)
-    })
+       if(content){
+        dispatch(getConversation(content))
+        setMsg(state[content])
+       }
 
    },[dispatch,content])
   
@@ -58,7 +69,7 @@ const ContentArea = ({content, ...rest}) => {
                             </div>
 
                         </div>
-                        <div className="note-area" placeholder="Message Jenn Rode" suppressContentEditableWarning={true} contentEditable="true"> <span style={{ color: "gray" }} >Message Jenn Rode</span></div>
+                        <div className="note-area" placeholder="Message Jenn Rode" val={inputVal} ref={elementRef}  suppressContentEditableWarning={true} contentEditable="true"> {inputVal}</div>
                         <div className="lower-icons">
                             <div className="lower-left-icons">
                                 <div className="sl-icon">
@@ -72,8 +83,8 @@ const ContentArea = ({content, ...rest}) => {
                                 </div>
                             </div>
                             <div className="lower-right-icons">
-                            <div className="sl-icon">
-                                    <SendIcon width="1em" height="1em" color="gray" />
+                            <div onClick={handleInputChange} className="sl-icon">
+                                    <SendIcon  width="1em" height="1em" color="gray" />
                                 </div>
                             </div>
                         </div>

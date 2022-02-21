@@ -1,11 +1,13 @@
-import { getChannels, getConvo, getRecentUsers, getUsers } from "../utils/_DATA"
+import { addConvo, getChannels, getConvo, getConvos, getRecentUsers, getUsers } from "../utils/_DATA"
 import {
 
 GET_RECENT_CONVOS,
 GET_USERS,
 GET_USER,
  GET_CONVERSATION,
- GET_CHANNELS
+ ADD_CONVO,
+ GET_CHANNELS,
+ GET_CONVERSATIONS
 } from "./types"
 
 
@@ -18,16 +20,19 @@ export const getInitialData = ()=>{
                getRecentUsers(),
                getUsers(),
                getChannels(),
+               getConvos(),
                
            ]).then(([
                users,
                allUsers,
-               channels
+               channels,
+               convos,
            ]) =>{
                return(
                 dispatch(_getRecentUsers(users)),
                 dispatch(_getUsers(allUsers)),
-                dispatch(_getChannels(channels))
+                dispatch(_getChannels(channels)),
+                dispatch(_getConversations(convos))
                ) 
            })
         } catch (error) {
@@ -37,10 +42,44 @@ export const getInitialData = ()=>{
 }
 
 export const getConversation = (user)=>{
-    return async ()=>{
-        return getConvo(user).then((data)=>{
-           return data
+    return async (dispatch)=>{
+         return getConvo(user).then((data)=>{
+             data = {
+                 [user]:{
+                     ...data
+                 }
+             }
+          dispatch(_getConvo(data))
         })
+    }
+}
+
+export const _getConversations = (data)=>{
+    return {
+        type: GET_CONVERSATIONS,
+        data
+    }
+}
+
+export const _getConvo=(data)=>{
+    return {
+        type: GET_CONVERSATION,
+        data
+       }
+}
+
+export const _addConvo = (type, name, msg)=>{
+    return async()=>{
+        try {
+            const data = await addConvo(type, name, msg)
+            return{
+                type: ADD_CONVO,
+                data
+            }
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 }
 
