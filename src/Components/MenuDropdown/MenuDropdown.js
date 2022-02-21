@@ -1,10 +1,9 @@
 
 import '../../App.css'
 import './MenuDropdown.css'
-import React, {Children, useState} from 'react';
+import React, { useState} from 'react';
 import {AddIcon, ArrownDownBold, MenuIcon} from '../../Components/Icons/SlackCloneIcons';
-import DirectMessageMenuItem from './DirectMessageMenuItem';
-import ChannelMenuItem from './ChannelMenuItem';
+
 const MenuDropdown = ({title, children})=>{
 
     const [show, setShow] = useState(true)

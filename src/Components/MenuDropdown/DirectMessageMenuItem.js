@@ -12,7 +12,7 @@ const DirectMessageMenuItem = ({user, dark, ...rest})=>{
                   <div className="menuIcon">
                       {/* <div className="imgIcon"> */}
                       <div className="dmIcon">
-                      <img className="imgIcon" src={user?.url}/>
+                      <img className="imgIcon" alt={user.name} src={user?.url}/>
                         <div className={`online-icon ${onlineStatus}`}></div>
                       </div>
                       {/* </div> */}

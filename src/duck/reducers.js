@@ -1,7 +1,6 @@
 import {
     GET_RECENT_CONVOS,
     GET_USERS,
-    GET_USER,
     GET_CONVERSATIONS,
     ADD_CONVO,
     START_NEW_CONVO,

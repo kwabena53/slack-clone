@@ -4,8 +4,6 @@ import { getConversation, startConvo, _addConvo } from "../../duck/actions"
 import { AddIcon, CodeIcon, LinkIcon, MicrophoneIcon, SendIcon, TextAlignIcon, TextBoldIcon, TextItalicIcon, VideoIcon } from "../Icons/SlackCloneIcons"
 import DirectMessageMenuItem from "../MenuDropdown/DirectMessageMenuItem"
 import Message from "../Message/Message"
-import RightSider from "../RightSider/RighSider"
-import SkeletonLoader from "../SkeletonLoader"
 import "./ContentArea.css"
 
 const ContentArea = ({content, setContent, ...rest}) => {
@@ -53,8 +51,10 @@ const ContentArea = ({content, setContent, ...rest}) => {
    }
 
    const startConversation = (user)=>{
+        setContent(user)
        dispatch(startConvo(user))
-       setContent(user)
+       
+       console.log(content)
    }
   let msg_ = state?state[content]: ""
   let recepient = content? user?.name: ""

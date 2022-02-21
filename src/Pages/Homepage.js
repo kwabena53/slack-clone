@@ -1,5 +1,5 @@
 import '../App.css'
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import SearchInput from '../Components/SearchInput/SearchInput';
 import { ArrowDown, Clock, EditIcon, HelpIcon, MenuIcon, SlackConnect, ThreadIcon } from '../Components/Icons/SlackCloneIcons';
 import MenuDropdown from '../Components/MenuDropdown/MenuDropdown';

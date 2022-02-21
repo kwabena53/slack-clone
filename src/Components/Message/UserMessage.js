@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { useSelector } from "react-redux"
 import { UserContext } from "../../Pages/Homepage"
 import { formatTime } from "../../utils/helpers"
@@ -18,7 +18,7 @@ const UserMessage = ({userMsg})=>{
     const user = userMsg?.user ? appState[userMsg?.user] : {}
     return(
         <div className="msg-main-content">
-                    <img onClick={()=>handleViewUserProfile(user?.id)} className="msg-user-img" src={user?.url} />
+                    <img onClick={()=>handleViewUserProfile(user?.id)} alt={user.name} className="msg-user-img" src={user?.url} />
                 <div className="msg-text-area">
                     <div className="msg-title">
                         <span onClick={()=>handleViewUserProfile(user?.id)} className="msg-user-name">{user?.name}</span> 

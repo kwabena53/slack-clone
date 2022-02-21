@@ -1,12 +1,4 @@
 
-const authUser={
-        id: 'bevans',
-        name: 'Bright Evans',
-        url: 'https://randomuser.me/api/portraits/men/33.jpg',
-        email: 'bevans@asu.edu',
-        workspaces:['EdPlus at ASU', 'ASU Community'],
-        active: true
-}
 
 const users = {
     jbsarfo: {
@@ -381,14 +373,12 @@ export const addConvo = (type, name, msg, )=>{
 
     let time = new Date().toISOString()
 
-    let date = _date.toString()
-
 
     return new Promise((res, rej)=>{
         setTimeout(()=>{
             if(type === "dm"){
                
-            }else if(type== "channel"){
+            }else if(type=== "channel"){
                 
             }
             res({

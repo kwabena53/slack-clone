@@ -1,5 +1,5 @@
 
-import { CloseIcon, HeadphoneIcon, MenuIcon, MessageIcon, VideoIcon } from "../Icons/SlackCloneIcons"
+import { CloseIcon, HeadphoneIcon, MenuIcon, MessageIcon } from "../Icons/SlackCloneIcons"
 import "./RightSider.css"
 
 
@@ -19,7 +19,7 @@ const RightSider = ({closeSider, user, ...rest})=>{
 
               
                 <div>
-                    <img className="profile-pic" src={user?.url}/>
+                    <img className="profile-pic" alt={user.name} src={user?.url}/>
                 </div>
                 <div>
                     <div className="user-name">
