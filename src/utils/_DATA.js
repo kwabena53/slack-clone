@@ -132,33 +132,6 @@ const conversations = {
                 },
             ]
         },
-        "2022-02-19":{
-            "date": "2022-02-19",
-            "messages": [
-                {
-                    "user": "bsmall",
-                    "created_at" : "2022-02-19T11:11:05.000000Z",
-                    "message": "Hey! are you in the office?"
-                },
-                {
-                    "user": "bevans",
-                    "created_at" : "2022-02-19T11:18:05.000000Z",
-                    "message": "Yes. About to leave soon?"
-                },
-                {
-                    "user": "bevans",
-                    "created_at" : "2022-02-19T11:21:05.000000Z",
-                    "message": "Can I help you in any way?"
-                },
-                {
-                    "user": "bsmall",
-                    "created_at" : "2022-02-19T11:23:05.000000Z",
-                    "message": "Let's talk tomorrow then?"
-                },
-            ]
-        },
-       
-        
     },
     "jbsarfo":{
         "2022-02-12":{

@@ -13,6 +13,15 @@
     /* width: 100%; */
     min-width: 973.63px;
 }
+
+.send-icon{
+    background: #168567;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+}
+.send-icon:hover{
+    background: #17a37e;
+}
 .contentFooter {
     bottom: 30px;
     margin: 0 1em;

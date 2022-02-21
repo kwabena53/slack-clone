@@ -45,9 +45,12 @@ const ContentArea = ({content, setContent, ...rest}) => {
    }
   
    const sendMessage =()=>{
-       dispatch(_addConvo("dm", content, inputVal))
-       clearInputField()
-       scrollToBottom()
+       if(inputVal!==""){
+        dispatch(_addConvo("dm", content, inputVal))
+        clearInputField()
+        scrollToBottom()
+       }
+       
    }
 
    const startConversation = (user)=>{
@@ -136,8 +139,8 @@ const ContentArea = ({content, setContent, ...rest}) => {
                                 </div>
                             </div>
                             <div className="lower-right-icons">
-                            <div onClick={sendMessage} className="sl-icon">
-                                    <SendIcon   width="1em" height="1em" color="gray" />
+                            <div onClick={sendMessage} className="send-icon">
+                                    <SendIcon   width="1em" height="1em" color="white" />
                                 </div>
                             </div>
                         </div>
