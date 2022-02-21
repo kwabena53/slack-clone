@@ -19,6 +19,9 @@ const ContentArea = ({content, ...rest}) => {
    const [inputVal, setInputVal] = useState("")
    
 
+  const scrollToBottom = () => {
+    elementRef.current.scrollIntoView({ behavior: "smooth", block: "start"});
+  }
     const handleInputChange = (e)=>{
         e.preventDefault()
         setInputVal(e.target.value)
@@ -36,17 +39,17 @@ const ContentArea = ({content, ...rest}) => {
    }
   
    const sendMessage =()=>{
-       console.log(elementRef.current.innerHTML)
        dispatch(_addConvo("dm", content, inputVal))
        clearInputField()
+       scrollToBottom()
    }
   let msg_ = state?state[content]: ""
     return (
-            <div {...rest} className="centerContent">
+            <div ref={elementRef}  {...rest} className="centerContent">
                 <div className="contentHeader">
                     <h3 className="slack-h3">{user?.name}</h3>
                 </div>
-                <div className="msgContent">
+                <div  className="msgContent">
                     {
                         msg_ ?
                        Object.values(msg_).map((item)=>{
@@ -81,7 +84,7 @@ const ContentArea = ({content, ...rest}) => {
                             </div>
 
                         </div>
-                        <input onChange={handleInputChange} className="note-area" value={inputVal} placeholder={`Message ${user?.name}`} ref={elementRef} />
+                        <input onChange={handleInputChange} className="note-area" value={inputVal} placeholder={`Message ${user?.name}`} />
                         <div className="lower-icons">
                             <div className="lower-left-icons">
                                 <div className="sl-icon">

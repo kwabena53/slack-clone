@@ -61,7 +61,7 @@ const users = {
         id: 'bsmall',
         name: 'Bryan Small',
         url: 'https://randomuser.me/api/portraits/men/21.jpg',
-        email: 'jbsarfo@asu.edu',
+        email: 'bsmall@asu.edu',
         workspaces:['EdPlus at ASU', 'ASU Community'],
         active: true
     },
